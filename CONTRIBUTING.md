@@ -5,8 +5,8 @@ Please note we have a [Code of Conduct](CODEOFCONDUCT.md), please follow it in a
 
 ## Bugs & issues
 When reporting a bug, we value the extra time you take to include details such as:
- - What version of endpointer that you are using
- - Steps to reproduce *before* the bug occured
+ - What version of mario that you are using
+ - Steps to reproduce *before* the bug occurred
  - A reproducable example (this helps us form a test case)
  - Environment/configuration that is relevant to your bug.
 
