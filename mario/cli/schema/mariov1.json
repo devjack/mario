@@ -1,0 +1,70 @@
+{
+  "definitions": {
+    "githubremote": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "title": "The Type Schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "github",
+          "examples": [
+            "github"
+          ]
+        },
+        "repo": {
+          "type": "string",
+          "title": "The Repo Schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "vendor/repository"
+          ]
+        },
+        "ref": {
+          "type": "string",
+          "title": "The Ref Schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "v0.0.1"
+          ]
+        }
+      }
+    }
+  },
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "object",
+  "required": ["version"],
+  "properties": {
+    "version": {
+      "type": "integer",
+      "$id": "/properties/version",
+      "title": "The Version Schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "content": {
+      "type": "object",
+	  "uniqueItems": true,
+      "patternProperties": {
+        "^(.*)$": {
+          "type": "object",
+          "properties": {
+            "remote": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/githubremote"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

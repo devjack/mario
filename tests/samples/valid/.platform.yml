@@ -1,0 +1,8 @@
+version: 1
+content:
+  a-named-remote:
+    remote:
+      type: github
+      repo: devjack/mario-content-sample
+      ref: v0.0.1
+

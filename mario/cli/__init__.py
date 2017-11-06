@@ -13,3 +13,4 @@ Options:
   --verbose        Verbose output
 """
 from .cli import cli
+from .validate import validate
