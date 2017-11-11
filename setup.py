@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="mario",
+    name="mariocli",
     description='Another package management tool; works well with endpointer.',
     license="MIT",
     version='0.0.1',
